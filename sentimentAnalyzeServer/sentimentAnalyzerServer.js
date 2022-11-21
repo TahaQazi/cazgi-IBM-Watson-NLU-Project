@@ -25,14 +25,14 @@ variables that you set up in the .env file*/
 
 
 function getNLUInstance() {
-    const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
+    const NLU = new NaturalLanguageUnderstandingV1({
         version: '2021-08-01',
         authenticator: new IamAuthenticator ({
             apikey: api_key
         }),
         serviceUrl: api_url
     });
-    return naturalLanguageUnderstanding;
+    return NLU;
 }
 
 
